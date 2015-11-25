@@ -1,0 +1,80 @@
+@import 'variables';
+@import 'mixins';
+
+.featured-books {
+    .os-college,
+    .os-cnx {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .book {
+        flex: 0 0 100%;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        position: relative;
+
+        @include desktop {
+            flex-basis: 50%;
+        }
+
+        @include phone {
+            padding: 0;
+        }
+
+        .cover {
+            border: 0;
+            float: left;
+            margin-right: 2rem;
+        }
+
+        .title {
+            @include phone {
+                font-size: 1.5rem;
+            }
+        }
+
+        .description {
+            line-height: 2rem;
+            max-height: 10rem;
+            overflow: hidden;
+            padding-right: 1.2rem;
+            position: relative;
+            text-align: justify;
+
+            &::before {
+                background: color(neutral-lightest);
+                bottom: 0;
+                content: '...';
+                position: absolute;
+                right: 0;
+            }
+
+            &::after {
+                background: color(neutral-lightest);
+                content: '';
+                height: 1rem;
+                margin-top: 0.5rem;
+                position: absolute;
+                right: 0;
+                width: 1.1rem;
+            }
+        }
+
+        .read-more {
+            bottom: 1rem;
+            font-weight: normal;
+            position: absolute;
+            right: 2rem;
+
+            @include phone {
+                display: none;
+            }
+
+            &::after {
+                content: '▸';
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

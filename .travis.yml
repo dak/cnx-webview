@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+    - '5.1'
+before_install:
+    - gem install scss_lint
+    - npm install -g gulpjs/gulp-cli#4.0 jspm
+    - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+sudo: false
+env:
+    global:
+        secure: zTLlND/9pJBifXGRVtkI3WaNgV4RJ2muyrRYpPSJt1YTGpDqnr2ubtPWi+PR1bU4CYEFfxK2SKEF2aI4s2LEP/+z7wJyAAdsqPIChTKcbDvykpys8OVCMnkW1IYBgCdvJrx4M9J/WZKhwPICT+N27oVYOj6bF185blLPfY6SbEWcJcmWCbMENoBhotyJFriaOIp+VzczXTwXj35OWhfyp+MraDq/V2dv/QADa5KH6ivnsP5Odmhtq+/PbNZuvgV7dS4B4wgHTv9OfPczInk4xPkmMgC/sc+k0pw3qb/o/g1u3tw3aycDjSgi3mTXsHGAaTQF4axXBZKNDBhgEDGfUduvkvFq1Xudika3OA7+vLQ528Fl68AsVS3E7sowRH79bJCr1Pj5luqpSRs+tdw+nPIelUdY2DlGoET2DzdCrXk5kL+ZM+B5RjsAosHtI4CmB6PYyS6NllGxuHnXzjFnVw25PPNXrXxiSq3VuW1wCKJ4DIChiEtzXNU2JgRnqtiaPho7GfL3Ah8coFRUyg1asT8GpGUpD5rYypU5zQzUI2sJ0W9LvSIweuQibVURqyavwYkoz5SvLXTqDZFay8/qYMlP7ixbiIae2y3kpd/PnT59WE4sxgCOmsOl+VIIaawd4jDMTyvbWMuLYO5zFsBGb+d2MNy7KICthROTqFg3vxI=
+notifications:
+    email: false

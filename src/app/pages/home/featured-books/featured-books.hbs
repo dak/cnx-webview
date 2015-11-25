@@ -1,0 +1,14 @@
+<style scoped>@import url(/app/pages/home/featured-books/featured-books.css);</style>
+<section class="books">
+    <h1>Featured Books</h1>
+
+    {{#each this}}
+        <h2>{{type}}</h2>
+
+        <div class="{{short}}">
+            {{#each books}}
+                {{> app/pages/home/featured-books/book.part.hbs}}
+            {{/each}}
+        </div>
+    {{/each}}
+</section>

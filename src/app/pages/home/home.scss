@@ -1,0 +1,74 @@
+@import 'variables';
+@import 'mixins';
+
+.home-page {
+    .splash {
+        background-image: url('/images/banners/splash.jpg');
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 48rem;
+        position: relative;
+
+        @include phone {
+            display: none;
+        }
+
+        .text-overlay {
+            left: 5rem;
+            padding: 6rem 4rem;
+            position: relative;
+            top: 3rem;
+            width: 50%;
+            z-index: 0;
+
+            @include tablet {
+                padding: 4rem 3rem;
+            }
+
+            &::before {
+                background-color: color(neutral-lightest);
+                background-repeat: no-repeat;
+                background-size: cover;
+                bottom: 0;
+                content: '';
+                filter: blur(15px);
+                left: 0;
+                opacity: 0.8;
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: -1;
+            };
+        }
+    }
+
+    .slogan {
+        color: color(primary);
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .details {
+        color: color(neutral-darkest);
+        display: none;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+
+        @include desktop {
+            display: block;
+        }
+    }
+
+    .books {
+        padding: 3rem;
+
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+}
